@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+table, th, td {
+    text-align: center;
+    
+}
+table{
+	position:fixed;
+	left:600px;
+    	top:200px;
+}
+</style>
+<script>
+function showScore() {
+    document.getElementById("p1").innerHTML = "Last score: " + Math.round(myGameArea.frameNo * speedValue);
+
+
+
+    if(Math.round(myGameArea.frameNo * speedValue) > Number(document.getElementById("s1").innerHTML)){
+	
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+	document.getElementById("7").innerHTML = document.getElementById("6").innerHTML;
+	document.getElementById("s7").innerHTML = document.getElementById("s6").innerHTML;
+	document.getElementById("6").innerHTML = document.getElementById("5").innerHTML;
+	document.getElementById("s6").innerHTML = document.getElementById("s5").innerHTML;
+	document.getElementById("5").innerHTML = document.getElementById("4").innerHTML;
+	document.getElementById("s5").innerHTML = document.getElementById("s4").innerHTML;
+	document.getElementById("4").innerHTML = document.getElementById("3").innerHTML;
+	document.getElementById("s4").innerHTML = document.getElementById("s3").innerHTML;
+	document.getElementById("3").innerHTML = document.getElementById("2").innerHTML;
+	document.getElementById("s3").innerHTML = document.getElementById("s2").innerHTML;
+	document.getElementById("2").innerHTML = document.getElementById("1").innerHTML;
+	document.getElementById("s2").innerHTML = document.getElementById("s1").innerHTML;
+	
+	document.getElementById("1").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s1").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > Number(document.getElementById("s2").innerHTML)){
+
+
+	document.getElementById("sx").innerHTML = document.getElementById("sx-1").innerHTML;
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+	document.getElementById("7").innerHTML = document.getElementById("6").innerHTML;
+	document.getElementById("s7").innerHTML = document.getElementById("s6").innerHTML;
+	document.getElementById("6").innerHTML = document.getElementById("5").innerHTML;
+	document.getElementById("s6").innerHTML = document.getElementById("s5").innerHTML;
+	document.getElementById("5").innerHTML = document.getElementById("4").innerHTML;
+	document.getElementById("s5").innerHTML = document.getElementById("s4").innerHTML;
+	document.getElementById("4").innerHTML = document.getElementById("3").innerHTML;
+	document.getElementById("s4").innerHTML = document.getElementById("s3").innerHTML;
+	document.getElementById("3").innerHTML = document.getElementById("2").innerHTML;
+	document.getElementById("s3").innerHTML = document.getElementById("s2").innerHTML;
+
+	document.getElementById("2").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s2").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s3").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+	document.getElementById("7").innerHTML = document.getElementById("6").innerHTML;
+	document.getElementById("s7").innerHTML = document.getElementById("s6").innerHTML;
+	document.getElementById("6").innerHTML = document.getElementById("5").innerHTML;
+	document.getElementById("s6").innerHTML = document.getElementById("s5").innerHTML;
+	document.getElementById("5").innerHTML = document.getElementById("4").innerHTML;
+	document.getElementById("s5").innerHTML = document.getElementById("s4").innerHTML;
+	document.getElementById("4").innerHTML = document.getElementById("3").innerHTML;
+	document.getElementById("s4").innerHTML = document.getElementById("s3").innerHTML;
+
+	document.getElementById("3").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s3").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s4").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+	document.getElementById("7").innerHTML = document.getElementById("6").innerHTML;
+	document.getElementById("s7").innerHTML = document.getElementById("s6").innerHTML;
+	document.getElementById("6").innerHTML = document.getElementById("5").innerHTML;
+	document.getElementById("s6").innerHTML = document.getElementById("s5").innerHTML;
+	document.getElementById("5").innerHTML = document.getElementById("4").innerHTML;
+	document.getElementById("s5").innerHTML = document.getElementById("s4").innerHTML;
+
+	document.getElementById("4").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s4").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s5").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+	document.getElementById("7").innerHTML = document.getElementById("6").innerHTML;
+	document.getElementById("s7").innerHTML = document.getElementById("s6").innerHTML;
+	document.getElementById("6").innerHTML = document.getElementById("5").innerHTML;
+	document.getElementById("s6").innerHTML = document.getElementById("s5").innerHTML;
+
+	document.getElementById("5").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s5").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s6").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+	document.getElementById("7").innerHTML = document.getElementById("6").innerHTML;
+	document.getElementById("s7").innerHTML = document.getElementById("s6").innerHTML;
+
+	document.getElementById("6").innerHTML = document.getElementById("form1").elements[0].value;;
+	document.getElementById("s6").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s7").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+	document.getElementById("8").innerHTML = document.getElementById("7").innerHTML;
+	document.getElementById("s8").innerHTML = document.getElementById("s7").innerHTML;
+
+	document.getElementById("7").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s7").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s8").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+	document.getElementById("9").innerHTML = document.getElementById("8").innerHTML;
+	document.getElementById("s9").innerHTML = document.getElementById("s8").innerHTML;
+
+	document.getElementById("8").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s8").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(Math.round(myGameArea.frameNo * speedValue) > document.getElementById("s9").innerHTML){
+
+
+	document.getElementById("10").innerHTML = document.getElementById("9").innerHTML;
+	document.getElementById("s10").innerHTML = document.getElementById("s9").innerHTML;
+
+	document.getElementById("9").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s9").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+    else if(myGameArea.frameNo > document.getElementById("s10").innerHTML){
+	document.getElementById("10").innerHTML = document.getElementById("form1").elements[0].value;
+	document.getElementById("s10").innerHTML = Math.round(myGameArea.frameNo * speedValue);
+	}
+  
+}
+</script>
+</head>
+<body onload="startGame()">
+<table style="width:10%" align:center>
+  <tr>
+    <th align:center;>ScoreBoard</th>
+  </tr>  
+  <tr>
+    <th>Name</th>
+    <th>Points</th>
+  </tr>
+  <tr>
+    <td id="1">Jill</td>
+    <td id="s1">500</td>
+  </tr>
+  <tr>
+    <td id="2">Mitch</td> 
+    <td id="s2">100</td> 
+  </tr>
+  <tr>
+    <td id="3">Kim</td>
+    <td id="s3">90</td>
+  </tr>
+  <tr>
+    <td id="4">Todd</td> 
+    <td id="s4">80</td> 
+  </tr>
+  <tr>
+    <td id="5">Jill</td>
+    <td id="s5">70</td>
+  </tr>
+  <tr>
+    <td id="6">Billy</td> 
+    <td id="s6">60</td> 
+  </tr>
+  <tr>
+    <td id="7">Michael</td>
+    <td id="s7">50</td>
+  </tr>
+  <tr>
+    <td id="8">Bob</td> 
+    <td id="s8">40</td> 
+  </tr>
+  <tr>
+    <td id="9">Pete</td>
+    <td id="s9">30</td>
+  </tr>
+  <tr>
+    <td id="10">Steve</td> 
+    <td id="s10">10</td> 
+  </tr>
+</table>
+<script>
+
+var myGamePiece;
+var myObstacles = [];
+var myScore;
+var speedValue = 1.0;
+
+function startGame() {
+    myGamePiece = new component(30, 30, "red", 10, 120);
+    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myObstacles = [];
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 480;
+        this.canvas.height = 270;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+	window.addEventListener('keydown', function (e) {
+            myGameArea.keys = (myGameArea.keys || []);
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        })
+        window.addEventListener('keyup', function (e) {
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        })
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop : function() {
+        clearInterval(this.interval);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;
+    this.x = x;
+    this.y = y;
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+    }
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            myGameArea.stop();
+            return;
+        }
+    }
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].speedX = -1;
+        myObstacles[i].newPos();
+        myObstacles[i].update();
+    }
+    myScore.text="SCORE: " + Math.round(myGameArea.frameNo * speedValue);
+    myScore.update();
+    if (myGameArea.keys && myGameArea.keys[65]) {myGamePiece.speedX = -1; }
+
+    if (myGameArea.keys && myGameArea.keys[68]) {myGamePiece.speedX = 1; }
+
+    if (myGameArea.keys && myGameArea.keys[87]) {myGamePiece.speedY = -1; }	
+
+    if (myGameArea.keys && myGameArea.keys[83]) {myGamePiece.speedY = 1; }
+    myGamePiece.newPos();
+    myGamePiece.update();
+}
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+function moveup() {
+    myGamePiece.speedY = -1;
+}
+
+function movedown() {
+    myGamePiece.speedY = 1;
+}
+
+function moveleft() {
+    myGamePiece.speedX = -1;
+}
+
+function moveright() {
+    myGamePiece.speedX = 1;
+}
+
+function clearmove() {
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+}
+function restart(){
+	speedValue += 0.02;
+	startGame();
+	
+}
+</script>
+
+<br><button type="button" onclick="restart()">Restart Game</button>
+
+
+<div style="text-align:center;width:480px;">
+  <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
+  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
+  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+</div>
+
+<p>Use wsad or the buttons above to control the block. 
+<br> The game becomes faster every time you restart. Scores will scale accordingly.</p>
+<p id="p1"></p>
+<form id="form1">
+  Enter Name: <input type="text" name="name">
+<button type="button" onclick="showScore()">Submit Score</button>
+</form>
+<h1>About</h1>
+<p>This is a prototype demo of HTML, Javascript, and CSS combined to create what you see here.</p>
+<footer>Created by Ben Cohen as a learning experience.</footer>
+
+</body>
+</html>
+
