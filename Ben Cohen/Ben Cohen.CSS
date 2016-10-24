@@ -1,0 +1,145 @@
+body {
+    	background-color: #1E8449;
+}
+
+h1 {
+   	color: white;
+    	text-align: center;
+}
+h1{
+	margin:15px;
+}
+p {
+    	font-family: verdana;
+    	font-size: 20px;
+	margin:15px;
+}
+div.links{
+	text-align:center;
+	overflow:hidden;
+}
+div.links ul{
+	display:inline-block;
+	text-align:left;
+}
+div.links li{
+	float:left;
+}
+div.links li a{
+	display:block;
+	<!--padding: 16px;-->
+}
+div,info{
+	text-align:center;
+}
+div.info ul{
+	display:inline-block; 
+}
+div.info li{
+	float:left; 
+	<!--display:block; -->
+}
+
+.button{
+	background-color: white;
+    	border: none;
+    	color: black;
+    	padding: 15px 32px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 28px;
+	margin: 4px 10px;
+	border-radius: 16px;
+	border: 2px solid #008CBA;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor:pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button1{
+	border: 2px solid #008CBA;
+	color: black;
+}
+.button1:hover {
+	background-color: #008CBA;
+	color: white;
+}
+.button2{
+	border: 2px solid #f44336;
+	color: black;
+}
+.button2:hover {
+	background-color: #f44336;
+	color: white;
+}
+
+.text{
+    	border: none;
+    	color: black;
+    	display: inline-block;
+    	text-align: center;
+    	text-decoration: none;
+    	font-size: 28px;
+	border-radius: 16px;
+	border: 2px solid #008CBA;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	cursor:pointer;
+	padding: 15px 32px;
+	background-color: #008CBA;	
+	color: white;
+}
+.text1:hover {
+	background-color: white;
+	border:2px solid #2E4053;
+	color: black;
+}
+.text2:hover {
+	background-color: white;
+	border:2px solid #E67E22;
+	color: black;
+}
+.text3:hover {
+	background-color: white;
+	border:2px solid #7D3C98;
+	color: black;
+}
+.text1{
+	background-color: #2E4053;
+	border:2px solid #2E4053;
+}
+.text2{
+	background-color: #E67E22;
+	border:2px solid #E67E22;
+}
+.text3{
+	background-color: #7D3C98;
+	border:2px solid #7D3C98;
+}
+</style>
+</head>

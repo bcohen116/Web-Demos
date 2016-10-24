@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<header> 
+<link rel="stylesheet" href="Ben Cohen.css">
+<title>Ben Cohen</title>
+</header>
+<body>
+<h1 style="color:black">Ben Cohen</h1>
+<p style="text-align:center"><b>Computer Engineering</b></p>
+<p style="text-align:center"><b>University of Cincinnati class of 2020</b></p>
+<p style="text-align:center"><b>Searching for Co-op Spring 2017</b></p>
+
+<div class="links">
+<ul style="list-style-type:none">
+	<li><a href="http://www.linkedin.com/in/CohenBen1 " target="_blank" style="border:0;">
+	<button class="button button1"><span>LinkedIn</span></button></a></li>
+
+	<li><a href="http://www.github.com/bcohen116" target="_blank" style="border:0;">
+	<button class="button button2"><span>GitHub</span></button></a></li>
+
+</ul>
+</div> 
+
+<div class="info"> 
+<ul style="list-style-type:none">
+<li><p id="skills" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="text text1">Skills</p></li>
+
+<li><p id="involvement" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="text text3">Involvement</p></li>
+
+<li><p id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" class="text text2" style="text-align:center">Contact</p></li>
+
+
+
+
+</ul>
+</div>
+
+
+<div class="info"> 
+<img src="Ben.jpg">
+</div>
+
+<script>
+function mouseOver(element){
+	<!--element.style.fontSize = "18px";-->
+	element.style.textAlign = "left";
+	if (element.id == "involvement"){
+		<!--element.innerHTML = "I am calm, dependable, and consistent. <br>One of the most rewarding parts of life are when <br>I can contribute to a product or service that will make others' lives easier. <br>Helping others provides a feeling that I enjoy."; -->
+		element.innerHTML = "IEEE, Hillel Cincinnati <br>Robotics Club, Engineering and Applied Science Tribunal <br>Association for Computing Machinery (ACM) <br>President of  Pokémon Go: UC <br>University of Cincinnati Symphony Orchestra (UCSO) <br>Bearcat Developers, Boy Scouts of America <br>Peer Mentor Program, BEARchats"
+	}
+	else if (element.id == "skills"){
+		element.innerHTML = "Java, C++ <br>Python, MATLAB <br>HTML, CSS <br>JavaScript, Verilog <br>---------------<br>GitHub, Unity <br>Linux, Autodesk Inventor <br>Circuits, Soldering"
+
+	}
+	else if (element.id == "contact"){ 
+		element.innerHTML = "bcohen116@gmail.com";
+	}
+}
+function mouseOut(element){
+	<!--element.style.fontSize = "28px";-->
+	element.style.textAlign = "center";
+	if (element.id == "involvement"){
+		element.innerHTML = "Involvement";
+	}
+	else if (element.id == "skills"){
+		element.innerHTML = "Skills";
+	}
+	else if (element.id == "contact"){
+		element.innerHTML = "Contact";
+	}
+}
+
+</script>
+</body>
+</html>
