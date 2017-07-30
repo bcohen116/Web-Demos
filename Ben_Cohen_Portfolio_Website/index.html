@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+    <header> 
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Ben_Cohen.css">
+        <title>Ben Cohen</title>
+        <div class="nav">
+            <div class="personalHeader">
+                <a onclick="home()"><p style="cursor:pointer;" class="size1">Ben Cohen</p></a>
+                <a onclick="home()"><p style="cursor:pointer;" class="size2">Computer Engineering</p></a>
+                <a onclick="home()"><p style="cursor:pointer;" class="size2">University of Cincinnati class of 2020</p></a>
+                <a onclick="home()"><p style="cursor:pointer;" class="size2">Searching for Co-op Spring 2018</p></a>
+            </div>
+            <div class="navButtons">
+                <a id="homeNav" class="active" onclick="home()">About</a>
+                <a id="skillsNav" onclick="skills()">Skills</a>
+                <a id="activityNav" onclick="activity()">Latest Activity</a>
+                <a id="contactNav" onclick="contact()">Contact</a>
+            </div>
+        </div>
+    </header>
+    <body>
+        <div id="home" class="content">
+            <div class="info profile"> 
+                <img src="Ben.jpg">
+            </div>
+            <div class="info infoPanel">
+                <h1>About Me:</h1>
+                <p>I am calm, dependable, and consistent. <br>I strongly believe that the best comes out of me when I am working towards a goal which will benefit others. Inspiration for projects I take on often have this goal in mind.</p>
+            </div>
+            <div class="links">
+                <ul style="list-style-type:none">
+                    <li><a href="http://www.linkedin.com/in/CohenBen1 " target="_blank" style="border:0;">
+                            <button class="button linkedinButton"><span>LinkedIn</span></button></a></li>
+
+                    <li><a href="http://www.github.com/bcohen116" target="_blank" style="border:0;">
+                            <button class="button githubButton"><span>GitHub</span></button></a></li>
+                </ul>
+            </div> 
+        </div>
+        <div id="skills" class="content hidden">
+            <div class="info infoPanel skillPanel">
+                <h1>Skills</h1>
+                <ul>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>MATLAB</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Verilog</li>
+                    <li>YUI</li>
+                    <li>SQL</li>
+                </ul>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Lunix</li>
+                    <li>Autodesk Inventor</li>
+                    <li>Circuits</li>
+                    <li>Soldering</li>
+                    <li>Unity</li>
+                    <li>Full Listing on my LinkedIn</li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul style="list-style-type:none">
+                    <li><a href="http://www.linkedin.com/in/CohenBen1 " target="_blank" style="border:0;">
+                            <button class="button linkedinButton"><span>LinkedIn</span></button></a></li>
+
+                    <li><a href="http://www.github.com/bcohen116" target="_blank" style="border:0;">
+                            <button class="button githubButton"><span>GitHub</span></button></a></li>
+                </ul>
+            </div> 
+        </div>
+        <div id="involvement" class="content hidden">
+            <div class="info infoPanel">
+                <h1>Latest Activity</h1>
+                <div class="activityContainer">
+                    <div class="latestProject">
+                        <h1>Arduino Custom Fish Feeder</h1>
+                        <a href="https://www.instructables.com/id/Arduino-Fish-Feeder-1/" target="_blank"><img src="fish_feeder.jpg"></img></a>
+                    </div>
+                    <div class="work">
+                        <h1>Junior Software Developer - CIMx</h1>
+                        <a href="http://www.cimx.com" target="_blank"><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAylAAAAJDBkYjczMzM4LWUwOTktNDk0MC1iNjRjLTE1NmNhYjczNWZlNA.png"></img></a>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <ul style="list-style-type:none">
+                    <li><a href="http://www.linkedin.com/in/CohenBen1 " target="_blank" style="border:0;">
+                            <button class="button linkedinButton"><span>LinkedIn</span></button></a></li>
+
+                    <li><a href="http://www.github.com/bcohen116" target="_blank" style="border:0;">
+                            <button class="button githubButton"><span>GitHub</span></button></a></li>
+                </ul>
+            </div> 
+        </div>
+        <div id="contact" class="content hidden">
+            <div class="info infoPanel">
+                <h1>Contact</h1>
+                <p>bcohen116@gmail.com</p>
+            </div>
+            <div class="links">
+                <ul style="list-style-type:none">
+                    <li><a href="http://www.linkedin.com/in/CohenBen1 " target="_blank" style="border:0;">
+                            <button class="button linkedinButton"><span>LinkedIn</span></button></a></li>
+
+                    <li><a href="http://www.github.com/bcohen116" target="_blank" style="border:0;">
+                            <button class="button githubButton"><span>GitHub</span></button></a></li>
+                </ul>
+            </div> 
+        </div>
+        <script>
+        function home(){
+            var allPanels = document.getElementsByClassName("content");
+            for(var x = 0;x < allPanels.length;x++){
+                allPanels.item(x).classList.remove("hidden");
+                if(allPanels.item(x) !== allPanels.home){
+                    allPanels.item(x).className += " hidden";
+                }
+            }
+            setActiveButton("homeNav");
+        }
+        function skills(){
+            var allPanels = document.getElementsByClassName("content");
+            for(var x = 0;x < allPanels.length;x++){
+                allPanels.item(x).classList.remove("hidden");
+                if(allPanels.item(x) !== allPanels.skills){
+                    allPanels.item(x).className += " hidden";
+                }
+            }
+            setActiveButton("skillsNav");
+        }
+        function activity(){
+            var allPanels = document.getElementsByClassName("content");
+            for(var x = 0;x < allPanels.length;x++){
+                allPanels.item(x).classList.remove("hidden");
+                if(allPanels.item(x) !== allPanels.involvement){
+                    allPanels.item(x).className += " hidden";
+                }
+            }
+            setActiveButton("involvementNav");
+        }
+        function contact(){
+            var allPanels = document.getElementsByClassName("content");
+            for(var x = 0;x < allPanels.length;x++){
+                allPanels.item(x).classList.remove("hidden");
+                if(allPanels.item(x) !== allPanels.contact){
+                    allPanels.item(x).className += " hidden";
+                }
+            }
+            setActiveButton("contactNav");
+        }
+        function setActiveButton(clickedId){
+            var buttonClicked = document.getElementById(clickedId);
+            var activeButton = document.getElementsByClassName("active");
+            for(var y = 0;y < activeButton.length;y++){
+                activeButton.item(y).classList.remove("active");
+            }
+            buttonClicked.className += " active";
+        }
+        </script>
+    </body>
+</html>
